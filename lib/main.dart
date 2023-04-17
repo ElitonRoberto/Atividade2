@@ -44,46 +44,61 @@ class Aula4 extends StatelessWidget {
 
                 Container(
                   padding:
-                      EdgeInsets.all(15), //espaço de 15px entre os componentes
+                      const EdgeInsets.all(15),//espaço de 15px entre os componentes
+                      
                   child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Brasil",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-
-                      Icon(Icons.star, color: Colors.blue), //icone
-                      Text("3500"),
+                      Column(children: [
+                        Text(
+                          "Brasil",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text("Ji-Paraná, RO")
+                      ]),
+                      Row(children: [
+                        Icon(Icons.star, color: Colors.blue),
+                        Text("3.500")
+                      ]),
                     ],
-                  ), //termina a linha
+                  ),
+
+                 //child: Container(child: const Text("ffgbn"),), 
                 ),
 
-               Text("Ji-Paraná, RO"),
-
-                Icon(Icons.call, color: Colors.blue),
-                Text(
-                  "Ligar",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-
-                Icon(Icons.location_city, color: Colors.blue),
-                Text(
-                  "Endereço",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-
-                Icon(Icons.share, color: Colors.blue),
-                Text(
-                  "Compartilhar",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(children: [
+                        Icon(Icons.call, color: Colors.blue),
+                        Text("Ligar",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ]),
+                      Column(
+                        children: [
+                          Icon(Icons.location_city, color: Colors.blue),
+                          Text(
+                            "Endereço",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      Column(children: [
+                        Icon(Icons.share, color: Colors.blue),
+                        Text(
+                          "Compartilhar",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ]),
+                    ]),
 
                 // Icon(Icons.star, color: Colors.blue),
-                //Text("Ji-Paraná é um município brasileiro do estado de Rondônia. Sua população, conforme estimativas do IBGE de 2021, era de 131 026 habitantes,[5] sendo o segundo mais populoso do estado e o décimo sexto mais populoso da Região Norte do Brasil, a 226ª mais populosa do Brasil e a 113ª mais populosa cidade do interior brasileiro.")
+                const Text(
+                    "Ji-Paraná é um município brasileiro do estado de Rondônia. Sua população, conforme estimativas do IBGE de 2021, era de 131 026 habitantes,[5] sendo o segundo mais populoso do estado e o décimo sexto mais populoso da Região Norte do Brasil, a 226ª mais populosa do Brasil e a 113ª mais populosa cidade do interior brasileiro."),
               ],
             ),
 
-            /*GridView.count(//Divisão em campos
+            /* GridView.count(//Divisão em campos
               scrollDirection: Axis.horizontal,
               crossAxisCount: 3,
               children: [
